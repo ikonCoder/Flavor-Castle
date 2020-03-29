@@ -1,0 +1,131 @@
+body{
+    background-color:#FFFFF0;
+}
+*{
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+} 
+
+a:hover{
+    color: rgb(245,222,179)
+}
+
+#greenTick{
+    height: 23px;
+    margin-left: 16px;
+}
+.Food-title{
+    text-align: center;
+    font-size: 60px;
+    margin-top: -175px;
+    color: rgb(245,222,179);
+    text-decoration: line-through;
+}
+
+.ft-1 {
+    text-align: center;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.navbar{
+    background-color: #FFFFF0 !important;
+}
+
+ #food-menu li{
+    margin-top: 25px;
+    font-size: 20px;
+    width: 100px;
+    color: #060606a6;
+}
+.burger-container:hover{
+    box-shadow: -1px 18px 18px;
+    background-color: rgb(245,222,179);
+}
+
+#food-menu{
+    margin-top: 70px;
+    width: 25%;
+} 
+
+.discription{
+    font-size: 15px;
+    width: 250px;
+    padding-top: 25px;
+    margin-left: -20px;  
+}
+
+#food-image-container{
+    height: 1000px;
+    margin-left: 5%;
+ }
+
+.burger-image{
+    width: 300px;
+    height: 200px;
+    margin-left: -38px;
+}
+
+.burger-container{
+    width: 325px;
+    height: 450px;
+    padding: 50px;
+    float: left;
+    margin: 25px;
+    margin-left: 100px;
+    box-shadow: 5px 18px 18px;
+}
+
+#itemTitle{
+    margin-left: -41px;
+    text-decoration: underline;
+}
+
+.burger-container {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+.cartCounter{
+    color: red;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

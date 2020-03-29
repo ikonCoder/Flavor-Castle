@@ -1,0 +1,272 @@
+body{
+    padding-bottom: 20px;
+    background-color: #FFFFF0 !important;
+}
+
+.navbar{
+    background-color: #FFFFF0 !important;
+}
+
+*{
+    box-sizing: border-box;   
+}
+
+/* NAVIGATION */
+
+.d-flex{
+padding-bottom: -10px;
+margin-bottom: -15px;
+padding-top: 5px;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Landing image and text */
+.title{
+    font-size: 115px;
+    color:white;
+    margin: 0;
+    font-family: 'Raleway', sans-serif; 
+    padding-right: 50px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    opacity: 2.0;
+    margin-left: 0px;;
+    margin-right: auto;
+    width: 660px;
+    align-content: right;
+    background-color: black;
+}
+.sub-title{
+    font-size: 25px;
+    padding-left: 50px;
+}
+
+.main {
+    padding-top: 100px;
+    right: 50px;
+   }
+.style-title{
+    font-size: 95px;
+     font-family: 'Raleway', sans-serif; 
+
+}
+.fixed-bg {
+    background-image: url('../images/image1.jpg');
+    opacity: 0.8;
+    background-size: cover;
+    min-height: 710px;
+    margin-top: 20px;
+    padding-top: 180px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Reviews/ */
+.award-container *{
+    margin-top: 70px;
+}
+
+.awards-main-container{
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-flex;
+}
+.award-container{
+    border-bottom: solid  2px rgb(245,222,179);
+    border-top: solid  2px rgb(245,222,179);
+    display: inline-block;
+    width: 25%;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.author{
+    margin-top: 55px;
+}
+
+/* Gallery images /*/
+
+img:hover{
+    border: 1px;
+}
+
+#galleryTitle{
+    color: white;
+    font-size: 70px;
+}
+
+
+.main-gallery{
+    width:45%;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    display: inline-flex;
+    background-color: black;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding:0px 2px 2px;  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .row{
+      margin-left:0px !important;
+      margin-right:0px !important;
+  } 
+
+  /*About Us Section/*/
+
+  .AboutUs-container{
+      padding: 50px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+  }
+  
+  #AboutUs{
+      font-size: 70px;
+      margin-bottom: 45px;
+  }
+
+  .AboutUsP{
+      font-size: 25px;
+      line-height: 35px;
+      font-family: 'PT Serif', serif;
+      padding-left: 25px;
+  }
+
+  .Newsletter *{
+    margin: 0 auto;
+    font-size: 50px;
+  } 
+
+.NewsLetter-info{
+    margin:0 auto;
+    text-align: center;
+}
+
+#gridContainer_contact{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "a b";
+}
+
+#grid-a{
+    grid-area: a;
+}
+#grid-b{
+    grid-area: b;
+    margin-top: 100px;
+    margin-left: 16%;
+}
+
+
+
+.submitButton{
+    margin-left: 0;
+    margin-right: 2%;
+    margin-top: 10px !important;
+}
+
+.email-input{
+    display: block;
+    margin-left: 42%;
+    margin-right: 20px;
+
+}
+
+.contantUs-conatainer h6{
+    font-size: 50px;
+}
+.contantUs-conatainer *{
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.title-hoo-container{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.googleMaps{
+    height: 300px;
+    width: 500px;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: -5%;
+}
+
+.hoo-container li{
+    display: block;
+    text-decoration: none;
+}
+
+.cartContainer{
+    position: absolute;
+    right: 25px;
+    top: 23px;
+}
+#shoppingCart{
+    width:23px;
+    float: right;
+}
+
+#finalOrderContainer{
+    margin-top: 3.5%;
+    width: 90vw;
+    height: 100vh;
+    background-color: rgb(245,222,179);
+    border-radius: 3px 50px 30px;
+}
+
+#finalInnerContainer{
+    background-color: #FFFFF0;
+    border-radius: 50px 50px 50px;
+    width: 85vw;
+    height: 80vh;
+    margin-left: 20px;
+}
+
+#orderTitle{
+    color: white;
+    padding: 20px 10px;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: right;
+    letter-spacing: 10px;
+}
+#totalContainer{
+    text-align: right;
+    margin-right: 50px;
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+#orderedItems{
+    margin-left: 5%;
+}
+
+/* Media queries */
+@media only screen and (max-width: 991px) {
+    .justify-content-center{justify-content: flex-end !important;}
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar-toggler{font-size: 2.25rem !important;}
+}
+        
