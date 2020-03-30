@@ -110,7 +110,17 @@
       <div class="burger-container container">
         <img class="burger-image" src="../Menu/menuImages/burger-cheeseburger-close-up-1199960.jpg">
         <div class="middle">
-          <p id="text" onclick="buttonToggle()" class="text">Add To Cart</p>
+          <p class="text" id="text" onclick="buttonToggle()" class="text">Add To Cart</p>
+        </div>
+          <h3 id="itemTitle">New York Style
+            <img id="greenTick" src="../menu/menuImages/tick.png" />
+          </h3>
+          <p class="discription">This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.</p>
+      </div>
+      <div class="burger-container container">
+        <img class="burger-image" src="../Menu/menuImages/burger-cheeseburger-close-up-1199960.jpg">
+        <div class="middle">
+          <p  class="text" id="text" onclick="buttonToggle()" class="text">Add To Cart</p>
         </div>
           <h3 id="itemTitle">New York Style
             <img id="greenTick" src="../menu/menuImages/tick.png" />
@@ -127,37 +137,4 @@
     <!-- my scripts -->
     <script src="../js/burgerSelections.js"></script>
   </body>
-  <script>
-    // var cartCounter = 0;
-    // var addToCartBtn = document.getElementById("text");
-    // addToCartBtn.value = "notAdded";    
-
-    // function adder(num){
-    //   cartCounter += 1;
-    // }
-    // function subtractor(num){
-    //   cartCounter -= 1;
-    // }
-
-
-    // function buttonToggle(){
-    //  var addToCartBtn = document.getElementById("text");
-
-    //   if (addToCartBtn.value === "notAdded") {
-    //     addToCartBtn.value = "added";
-    //     addToCartBtn.innerHTML = "Remove From Cart";
-        
-    //     $("#cartValue").text(adder(cartCounter));
-    //     $("#cartValue").text(cartCounter);
-    //   }
-    //   else {
-    //     addToCartBtn.value = "notAdded";
-    //     addToCartBtn.innerHTML = "Add To Cart";
-
-    //     $("#cartValue").text(subtractor(cartCounter));
-    //     $("#cartValue").text(cartCounter);
-    //   }
-    // }
-
-  </script>
 </html>

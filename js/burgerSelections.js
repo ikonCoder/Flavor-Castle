@@ -1,4 +1,5 @@
-// $( document ).ready(function() {
+    
+    //Section: Loads images and image data onto page
     function loadImgs(){
     var imgArr = new Array();
     var imgTitle = new Array();
@@ -83,10 +84,12 @@ for(var i = 0; i < imgArr.length; i++){
     $(theTitle).append(cBox);
     }
 }
-
 loadImgs();
 
+
+//Section: Handles the cart functionality
 var cartCounter = 0;
+var mathFuncVar;
 var addToCartBtn = document.getElementById("text");
 addToCartBtn.value = "notAdded";    
 
@@ -97,27 +100,36 @@ function subtractor(num){
   cartCounter -= 1;
 }
 
-var uniqueName = ['abc','ght','kuk','dsi']; 
 
-function buttonToggle(){
- var addToCartBtn = document.getElementById("text");
-
-  if (addToCartBtn.value === "notAdded") {
-    addToCartBtn.value = "added";
-    addToCartBtn.innerHTML = "Remove From Cart";
-    
-    $("#cartValue").text(adder(cartCounter));
-    $("#cartValue").text(cartCounter);
+//Functions that compute the math for the shopping cart.
+function cartMath(){
+  if(mathFuncVar === 1){
+    adder(cartCounter);
+      $("#cartValue").text(cartCounter);
+      console.log("Items added!");
   }
-  else {
-    addToCartBtn.value = "notAdded";
-    addToCartBtn.innerHTML = "Add To Cart";
 
-    $("#cartValue").text(subtractor(cartCounter));
-    $("#cartValue").text(cartCounter);
+  if(mathFuncVar === 0){
+    subtractor(cartCounter);
+      $("#cartValue").text(cartCounter);
+      console.log("Items Subtracted!");
   }
 }
 
+//Functions that toggle the text for the "add to cart button"
+function buttonToggle(){
+  if(addToCartBtn.value === "notAdded") {
+    mathFuncVar = 1; 
+    addToCartBtn.value = "added";
+    addToCartBtn.innerHTML = "Remove From Cart";
+      cartMath();
+  }
+  else{
+    mathFuncVar = 0;
+    addToCartBtn.value = "notAdded";
+    addToCartBtn.innerHTML = "Add To Cart";
+      cartMath();
+  }
+}
 
-// });  
 
