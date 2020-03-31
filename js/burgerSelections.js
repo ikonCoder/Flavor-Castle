@@ -1,12 +1,20 @@
-    
-    //Section: Loads images and image data onto page
-    function loadImgs(){
+// Globals
+var ids = new Array(6);
+console.log(ids);
+var cartCounter = 0;
+
+
+
+
+
+  function loadImgs(){
     var imgArr = new Array();
     var imgTitle = new Array();
     var imgDesc = new Array();
     var checkBox = new Array();
     var cartBtnText = new Array();
 
+    // Note: This can be optimized with a loop
     cartBtnText.push(
         'Add To Cart',
         'Add To Cart',
@@ -73,7 +81,7 @@ for(var i = 0; i < imgArr.length; i++){
     innerCartBtn.setAttribute("onclick", "buttonToggle()");
     innerCartBtn.textContent = cartBtnText[i];
     
-
+  // NOTE: Optimize this to not repeat itself. - use burgarContainer as the base and append to the theImg, theTitle,...
     //add the imgs and divs to DOM
     $("#food-image-container").append(burgerContainer);
     $(burgerContainer).append(theImg);
@@ -85,11 +93,8 @@ for(var i = 0; i < imgArr.length; i++){
     }
 }
 loadImgs();
+// 
 
-
-//Section: Handles the cart functionality
-var cartCounter = 0;
-var mathFuncVar;
 var addToCartBtn = document.getElementById("text");
 addToCartBtn.value = "notAdded";    
 
@@ -100,36 +105,31 @@ function subtractor(num){
   cartCounter -= 1;
 }
 
+var uniqueName = ['abc','ght','kuk','dsi']; 
 
-//Functions that compute the math for the shopping cart.
-function cartMath(){
-  if(mathFuncVar === 1){
-    adder(cartCounter);
-      $("#cartValue").text(cartCounter);
-      console.log("Items added!");
-  }
-
-  if(mathFuncVar === 0){
-    subtractor(cartCounter);
-      $("#cartValue").text(cartCounter);
-      console.log("Items Subtracted!");
-  }
-}
-
-//Functions that toggle the text for the "add to cart button"
 function buttonToggle(){
-  if(addToCartBtn.value === "notAdded") {
-    mathFuncVar = 1; 
+ var addToCartBtn = document.getElementById("text");
+
+  if (addToCartBtn.value === "notAdded") {
     addToCartBtn.value = "added";
     addToCartBtn.innerHTML = "Remove From Cart";
-      cartMath();
+    
+    $("#cartValue").text(adder(cartCounter));
+    $("#cartValue").text(cartCounter);
   }
-  else{
-    mathFuncVar = 0;
+  else {
     addToCartBtn.value = "notAdded";
     addToCartBtn.innerHTML = "Add To Cart";
-      cartMath();
+
+    $("#cartValue").text(subtractor(cartCounter));
+    $("#cartValue").text(cartCounter);
   }
 }
 
+//Assign each img an id + #. Loop through the numbers when needed to identify which button was selected. Add and sub per usual, but each function checks if the id has already been selcected.  [*thought: what if the counter in the cart had an array with all the chosen id/fooditems and then comparied them to the ids of the items in the html] if(button has
+  // don't add to 
+// }
+
+
+// });  
 
