@@ -20,7 +20,7 @@
         }
         .Food-title {
             text-align: right;
-            font-size: 70px;
+            font-size: 45px;
             margin-top: 20%;
             padding-right: 10px;
         }
@@ -29,10 +29,11 @@
         }
         #food-menu {
             position: absolute;
-            right: 5px;
+            right: 0px;
             margin-top: 18.8px;
-            width: 100%;
-            text-align: right;
+            width: 100vw;
+            text-align: center;
+            padding-left: 0px;
         }
         #food-menu li {
             font-size: 17.8px;
