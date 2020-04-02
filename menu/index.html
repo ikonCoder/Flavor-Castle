@@ -12,57 +12,59 @@
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/breakpoints.css">
-
+    <!-- Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500&display=swap" rel="stylesheet">
+  
     <style>
-  .container {
-  position: relative;
-}
+       .container {
+        position: relative;
+      }
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
+      .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
 
-.container:hover .image {
-  opacity: 0.3;
-}
+      .container:hover .image {
+        opacity: 0.3;
+      }
 
-.container:hover .middle {
-  opacity: 1;
-}
+      .container:hover .middle {
+        opacity: 1;
+      }
 
-#text {
-  background-color: white;
-  color: grey;
-  font-size: 16px;
-  padding: 16px 32px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  color: green;
-  border-radius: 50%;
-  display: inline-block;
-  text-align: center;
-}
+      #text {
+        background-color: white;
+        color: grey;
+        font-size: 16px;
+        padding: 16px 32px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .dot {
+        height: 25px;
+        width: 25px;
+        background-color: #bbb;
+        color: green;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+      }
     </style>
 
   </head>
@@ -119,13 +121,20 @@
     <div id="food-image-container">
       <div class="burger-container container">
         <img class="burger-image" src="../menu/menuImages/burger-cheeseburger-close-up-1199960.jpg">
-        <div class="middle">
-          <p  class="text" id="text" onclick="buttonToggle()" class="text">Add To Cart</p>
-        </div>
+          <!-- <div class="middle">
+            <p  class="text" id="text" onclick="buttonToggle()" class="text">Add To Cart</p>
+          </div> -->
           <h3 id="itemTitle">New York Style
             <img id="greenTick" src="../menu/menuImages/tick.png" />
           </h3>
           <p class="discription">This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.</p>
+          
+          <div id="ctaSection">
+            <span class="itemCost">$13.29</span>
+            <button class="addToCartMobile" onclick="buttonToggle()">Add to cart</button>
+            <button id="headerIncButton" class="sizeButton" onclick="increaseHeader()">+</button>
+            <button id="headerDecButton" class="sizeButton" onclick="decreaseHeader()">-</button>
+          </div>
       </div>
     </div>
 

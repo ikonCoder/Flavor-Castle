@@ -11,6 +11,10 @@ var cartCounter = 0;
     var imgArr = new Array();
     var imgTitle = new Array();
     var imgDesc = new Array();
+    var itemCost = new Array()
+    var decBtn = new Array();
+    var incBtn = new Array();
+    var addToCartText = new Array();
     var checkBox = new Array();
     var cartBtnText = new Array();
 
@@ -21,6 +25,34 @@ var cartCounter = 0;
         'Add To Cart',
         'Add To Cart',
         'Add To Cart'
+    )
+    addToCartText.push(
+        'Add to cart',
+        'Add to cart',
+        'Add to cart',
+        'Add to cart',
+        'Add to cart'
+    )
+    incBtn.push(
+      '+',
+      '+',
+      '+',
+      '+',
+      '+'
+    )
+    decBtn.push(
+      '-',
+      '-',
+      '-',
+      '-',
+      '-'
+    )
+    itemCost.push(
+        '$13.29',
+        '$10.99',
+        '$13.29',
+        '$8.50',
+        '$9.00'
     )
     checkBox.push(
         './menuImages/tick.png',
@@ -74,9 +106,37 @@ for(var i = 0; i < imgArr.length; i++){
     theDesc.className = "discription";
     theDesc.textContent = imgDesc[i];
 
+    itemCostContainer = document.createElement('div');
+    itemCostContainer.id = "ctaSection";
+
+    costOfItem = document.createElement('span');
+    costOfItem.className = "itemCost";
+    costOfItem.textContent = itemCost[i];
+    
+
+    addToCart2 = document.createElement('button');
+    addToCart2.className = "addToCartMobile";
+    addToCart2.textContent = addToCartText[i];
+    addToCart2.setAttribute("onclick", "buttonToggle()");
+
+    headerIncButton = document.createElement('button');
+    headerIncButton.id = "headerIncButton";
+    headerIncButton.className = "sizeButton";
+    headerIncButton.textContent = incBtn[i];
+    headerIncButton.setAttribute("onclick", "increaseHeader()");
+
+    headerDecButton = document.createElement('button');
+    headerDecButton.id = "headerDecButton";
+    headerDecButton.className = "sizeButton";
+    headerDecButton.textContent = decBtn[i];
+    headerDecButton.setAttribute("onclick", "decreaseHeader()");
+
+    addToCart = document.createElement('div');
+
+
     cartBtn = document.createElement('div');
     innerCartBtn = document.createElement('div');
-    cartBtn.className = "middle";
+    // cartBtn.className = "middle";
     innerCartBtn.id = "text";
     innerCartBtn.setAttribute("onclick", "buttonToggle()");
     innerCartBtn.textContent = cartBtnText[i];
@@ -88,6 +148,17 @@ for(var i = 0; i < imgArr.length; i++){
     $(burgerContainer).append(theTitle);
     $(burgerContainer).append(theDesc);
     $(burgerContainer).append(cartBtn);
+    $(burgerContainer).append(itemCostContainer);
+    $(costOfItem).appendTo(itemCostContainer);
+    $(addToCart2).appendTo(itemCostContainer);
+    $(headerIncButton).appendTo(itemCostContainer);
+    $(headerDecButton).appendTo(itemCostContainer);
+
+    // $(burgerContainer).append(costOfItem);
+    // $(burgerContainer).append(addToCart2);
+    // $(burgerContainer).append(headerIncButton);
+    // $(burgerContainer).append(headerDecButton);
+    //
     $(cartBtn).append(innerCartBtn);
     $(theTitle).append(cBox);
     }

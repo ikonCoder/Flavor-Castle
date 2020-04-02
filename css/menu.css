@@ -1,5 +1,7 @@
 body{
     background-color:#FFFFF0;
+    font-family: 'Baloo Thambi 2', cursive;
+
 }
 *{
     box-sizing: border-box;
@@ -19,6 +21,7 @@ a:hover{
 }
 .Food-title{
     text-align: center;
+    font-family: 'Baloo Thambi 2', cursive;
     font-size: 60px;
     margin-top: -175px;
     color: rgb(245,222,179);
@@ -43,7 +46,7 @@ a:hover{
 }
 .burger-container:hover{
     box-shadow: -1px 18px 18px;
-    background-color: rgb(245,222,179);
+    /* background-color: rgb(245,222,179); */
 }
 
 #food-menu{
@@ -81,7 +84,8 @@ a:hover{
 
 #itemTitle{
     margin-left: -41px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 .burger-container {
@@ -94,8 +98,42 @@ a:hover{
     -o-animation: fadein 2s; /* Opera */
 }
 
+#headerIncButton{
+    width: 35px;
+    height: 45px;
+    border-radius: 12px;
+    border: solid 1.5px black;
+    background-color: transparent;
+    font-weight: bold;
+}
+#headerDecButton{
+    width: 34px;
+    height: 45px;
+    border-radius: 12px;
+    border: solid 1.5px black;
+    background-color: transparent;
+    font-weight: bold;
+}
+.addToCartMobile{
+    width: 180px;
+    height: 45px;
+    border-radius: 12px;
+    border: solid 1.5px darkseagreen;
+    background-color: transparent;
+    outline:none !important;
+}
 .cartCounter{
     color: red;
+}
+.dot{
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 18px;
+}
+
+.itemCost{
+    font-size: 40px;
+    font-family: 'Baloo Thambi 2';
+    vertical-align: -3px;
 }
 @keyframes fadein {
     from {
