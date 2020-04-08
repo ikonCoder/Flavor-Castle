@@ -47,7 +47,7 @@
         padding-top: 15%;
         border-radius: 10px;
     }
-    }
+    
     .burger-image{
         margin-left: 0px !important;
         width: 92%;
@@ -60,9 +60,6 @@
         box-shadow: 0px -19px 16px 20px rgba(204, 198, 188, 0.42);
         margin-bottom: 25% !important;
         padding: 0px 0px 60px 0px;
-    }
-    #itemTitle{
-        margin: 0px;
     }
     .discription {
         width: 100%;
@@ -77,11 +74,17 @@
     }
     #itemTitle{
         font-size: 34.8px;
+        margin: 0px;
+        padding-top: 20px;
     }
     
     #greenTick{
         display: none;
     }
+    .burger-container:hover{
+        box-shadow: 0px -19px 16px 20px rgba(204, 198, 188, 0.42);
+    }
+    
 }
 
 @media (max-width: 340px){

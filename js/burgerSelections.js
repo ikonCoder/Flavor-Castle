@@ -119,27 +119,26 @@ for(var i = 0; i < imgArr.length; i++){
     addToCart2.textContent = addToCartText[i];
     addToCart2.setAttribute("onclick", "buttonToggle()");
 
-    headerIncButton = document.createElement('button');
-    headerIncButton.id = "headerIncButton";
-    headerIncButton.className = "sizeButton";
-    headerIncButton.textContent = incBtn[i];
-    headerIncButton.setAttribute("onclick", "increaseHeader()");
+    // headerIncButton = document.createElement('button');
+    // headerIncButton.id = "headerIncButton";
+    // headerIncButton.className = "sizeButton";
+    // headerIncButton.textContent = incBtn[i];
+    // headerIncButton.setAttribute("onclick", "increaseHeader()");
 
-    headerDecButton = document.createElement('button');
-    headerDecButton.id = "headerDecButton";
-    headerDecButton.className = "sizeButton";
-    headerDecButton.textContent = decBtn[i];
-    headerDecButton.setAttribute("onclick", "decreaseHeader()");
+    // headerDecButton = document.createElement('button');
+    // headerDecButton.id = "headerDecButton";
+    // headerDecButton.className = "sizeButton";
+    // headerDecButton.textContent = decBtn[i];
+    // headerDecButton.setAttribute("onclick", "decreaseHeader()");
 
     addToCart = document.createElement('div');
 
 
     cartBtn = document.createElement('div');
-    innerCartBtn = document.createElement('div');
-    // cartBtn.className = "middle";
-    innerCartBtn.id = "text";
-    innerCartBtn.setAttribute("onclick", "buttonToggle()");
-    innerCartBtn.textContent = cartBtnText[i];
+    // innerCartBtn = document.createElement('div');
+    // innerCartBtn.id = "text";
+    // innerCartBtn.setAttribute("onclick", "buttonToggle()");
+    // innerCartBtn.textContent = cartBtnText[i];
     
   // NOTE: Optimize this to not repeat itself. - use burgarContainer as the base and append to the theImg, theTitle,...
     //add the imgs and divs to DOM
@@ -151,15 +150,11 @@ for(var i = 0; i < imgArr.length; i++){
     $(burgerContainer).append(itemCostContainer);
     $(costOfItem).appendTo(itemCostContainer);
     $(addToCart2).appendTo(itemCostContainer);
-    $(headerIncButton).appendTo(itemCostContainer);
-    $(headerDecButton).appendTo(itemCostContainer);
+    // $(headerIncButton).appendTo(itemCostContainer);
+    // $(headerDecButton).appendTo(itemCostContainer);
 
-    // $(burgerContainer).append(costOfItem);
-    // $(burgerContainer).append(addToCart2);
-    // $(burgerContainer).append(headerIncButton);
-    // $(burgerContainer).append(headerDecButton);
-    //
-    $(cartBtn).append(innerCartBtn);
+  
+    // $(cartBtn).append(innerCartBtn);
     $(theTitle).append(cBox);
     }
 }
