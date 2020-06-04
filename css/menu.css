@@ -18,11 +18,12 @@ a:hover{
 #greenTick{
     height: 23px;
     margin-left: 16px;
+    display: none;
 }
 .Food-title{
     text-align: center;
     font-family: 'Baloo Thambi 2', cursive;
-    font-size: 60px;
+    font-size: 92px;
     margin-top: -175px;
     color: rgb(245,222,179);
     text-decoration: line-through;
@@ -50,6 +51,10 @@ a:hover{
 
 #ctaSection{
     padding: 0px 20px;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
 }
 
 #food-menu{
@@ -62,6 +67,7 @@ a:hover{
     width: 250px;
     padding-top: 25px;
     margin-left: -20px;  
+    font-weight: bold;
 }
 
 #food-image-container{
@@ -73,22 +79,24 @@ a:hover{
     width: 300px;
     height: 200px;
     margin-left: -38px;
+    border-radius: 10px;
 }
 
 .burger-container{
     width: 325px;
-    height: 450px;
+    height: auto;
     padding: 50px;
+    padding-top: 20px;
     float: left;
-    margin: 25px;
     margin-left: 100px;
-    box-shadow: 5px 18px 18px;
+    box-shadow: 1px 1px 10px 0px;
+    min-height: 640px;
+    border-radius: 12px;
 }
 
 #itemTitle{
-    margin-left: -41px;
-    /* text-decoration: underline; */
     font-family: 'Baloo Thambi 2', cursive;
+    margin-top: 10px;
 }
 
 .burger-container {
@@ -105,21 +113,24 @@ a:hover{
     width: 35px;
     height: 45px;
     border-radius: 12px;
-    border: solid 1.5px black;
+    border: none;
     background-color: transparent;
     font-weight: bold;
     margin-top: 20px;
+    padding-left: 20px;
 }
 #headerDecButton{
     width: 34px;
     height: 45px;
     border-radius: 12px;
-    border: solid 1.5px black;
+    border: none;
     background-color: transparent;
     font-weight: bold;
+    margin-right: 5px;
+    margin-top: 20px;
+    padding-left: 20px;
 }
 .addToCartMobile{
-    width: 100%;
     height: 55px;
     border-radius: 22px;
     border: solid 1.5px lightgray;
@@ -127,6 +138,9 @@ a:hover{
     background-color: transparent;
     outline: none !important;
     color: darkgreen;
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 13.5px;
 }
 .cartCounter{
     color: red;
@@ -137,9 +151,20 @@ a:hover{
 }
 
 .itemCost{
+    display: block;
     font-size: 40px;
     font-family: 'Baloo Thambi 2';
     vertical-align: -3px;
+}
+
+.qtTextBox{
+    width: 60px;
+    height: 45px;
+    border: 1px black solid;
+    margin-top: 20px;
+    background-color: transparent;
+    text-align: center;
+    margin-left: 30px;
 }
 @keyframes fadein {
     from {
@@ -173,3 +198,11 @@ a:hover{
         opacity: 1;
     }
 }
+
+
+
+
+
+
+
+

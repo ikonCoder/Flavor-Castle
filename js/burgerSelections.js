@@ -1,10 +1,10 @@
 // Globals
-var ids = new Array(6);
-console.log(ids);
 var cartCounter = 0;
 
 
 
+
+ 
 
 
   function loadImgs(){
@@ -12,13 +12,19 @@ var cartCounter = 0;
     var imgTitle = new Array();
     var imgDesc = new Array();
     var itemCost = new Array()
-    var decBtn = new Array();
-    var incBtn = new Array();
     var addToCartText = new Array();
     var checkBox = new Array();
     var cartBtnText = new Array();
+    var qtTextBox = new Array();
 
     // Note: This can be optimized with a loop
+    qtTextBox.push(
+      'Qt.',
+      'Qt.',
+      'Qt.t',
+      'Qt.',
+      'Qt.'
+  )
     cartBtnText.push(
         'Add To Cart',
         'Add To Cart',
@@ -32,20 +38,6 @@ var cartCounter = 0;
         'Add to cart',
         'Add to cart',
         'Add to cart'
-    )
-    incBtn.push(
-      '+',
-      '+',
-      '+',
-      '+',
-      '+'
-    )
-    decBtn.push(
-      '-',
-      '-',
-      '-',
-      '-',
-      '-'
     )
     itemCost.push(
         '$13.29',
@@ -113,32 +105,20 @@ for(var i = 0; i < imgArr.length; i++){
     costOfItem.className = "itemCost";
     costOfItem.textContent = itemCost[i];
     
+    qtBox = document.createElement('input');
+    qtBox.className = "qtTextBox";
+    qtBox.placeholder = "Qt.";
+
+    
 
     addToCart2 = document.createElement('button');
     addToCart2.className = "addToCartMobile";
+    addToCart2.id = "addBtn";
     addToCart2.textContent = addToCartText[i];
     addToCart2.setAttribute("onclick", "buttonToggle()");
 
-    // headerIncButton = document.createElement('button');
-    // headerIncButton.id = "headerIncButton";
-    // headerIncButton.className = "sizeButton";
-    // headerIncButton.textContent = incBtn[i];
-    // headerIncButton.setAttribute("onclick", "increaseHeader()");
-
-    // headerDecButton = document.createElement('button');
-    // headerDecButton.id = "headerDecButton";
-    // headerDecButton.className = "sizeButton";
-    // headerDecButton.textContent = decBtn[i];
-    // headerDecButton.setAttribute("onclick", "decreaseHeader()");
-
-    addToCart = document.createElement('div');
-
 
     cartBtn = document.createElement('div');
-    // innerCartBtn = document.createElement('div');
-    // innerCartBtn.id = "text";
-    // innerCartBtn.setAttribute("onclick", "buttonToggle()");
-    // innerCartBtn.textContent = cartBtnText[i];
     
   // NOTE: Optimize this to not repeat itself. - use burgarContainer as the base and append to the theImg, theTitle,...
     //add the imgs and divs to DOM
@@ -150,18 +130,15 @@ for(var i = 0; i < imgArr.length; i++){
     $(burgerContainer).append(itemCostContainer);
     $(costOfItem).appendTo(itemCostContainer);
     $(addToCart2).appendTo(itemCostContainer);
-    // $(headerIncButton).appendTo(itemCostContainer);
-    // $(headerDecButton).appendTo(itemCostContainer);
-
-  
-    // $(cartBtn).append(innerCartBtn);
+   
     $(theTitle).append(cBox);
     }
 }
 loadImgs();
-// 
 
-var addToCartBtn = document.getElementById("text");
+
+var test = document.querySelector('.addToCartMobile');
+var addToCartBtn = $("[id = 'addBtn']");
 addToCartBtn.value = "notAdded";    
 
 function adder(num){
@@ -171,14 +148,15 @@ function subtractor(num){
   cartCounter -= 1;
 }
 
-var uniqueName = ['abc','ght','kuk','dsi']; 
-
 function buttonToggle(){
- var addToCartBtn = document.getElementById("text");
+
+  TODO:
+  //Step1: grabs the value of the button and checks if it is "added" or "not added"
+  //Step2: change the text of the button to be "remove from cart" or "add to cart" 
 
   if (addToCartBtn.value === "notAdded") {
     addToCartBtn.value = "added";
-    addToCartBtn.innerHTML = "Remove From Cart";
+    test.innerHTML = "Remove From Cart";
     
     $("#cartValue").text(adder(cartCounter));
     $("#cartValue").text(cartCounter);
@@ -186,16 +164,16 @@ function buttonToggle(){
   else {
     addToCartBtn.value = "notAdded";
     addToCartBtn.innerHTML = "Add To Cart";
+    test.innerHTML = "Add To Cart";
 
     $("#cartValue").text(subtractor(cartCounter));
     $("#cartValue").text(cartCounter);
   }
 }
 
-//Assign each img an id + #. Loop through the numbers when needed to identify which button was selected. Add and sub per usual, but each function checks if the id has already been selcected.  [*thought: what if the counter in the cart had an array with all the chosen id/fooditems and then comparied them to the ids of the items in the html] if(button has
-  // don't add to 
-// }
 
 
-// });  
+
+//Assign each img an id + #. Loop through the numbers when needed to identify which button was selected. Add and sub per usual, but each function checks if the id has already been selcected.  [*thought: what if the counter in the cart had an array with all the chosen id/fooditems and then comparied them to the ids of the items in the html]
+
 

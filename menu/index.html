@@ -47,15 +47,6 @@
       .container:hover .middle {
         opacity: 1;
       }
-
-      #text {
-        background-color: white;
-        color: grey;
-        font-size: 16px;
-        padding: 16px 32px;
-        cursor: pointer;
-        white-space: nowrap;
-      }
       .dot {
         height: 25px;
         width: 25px;
@@ -95,20 +86,6 @@
         0
       </div>
     </a>
-  <!-- Hidden on default. Visible on mobile -->
-  <!-- </div>
-    <ul id="food-menu">
-      <a href="index.html"><b><li>Burgers</li></b></a>
-      <a href="deepDish.html"><li>Deep Dish</li></a>
-      <a href="pasta.html"><li>Pastas</li></a>
-      <a href="salad.html"><li>Salads</li></a>
-    </ul>
-  </div> -->
-      <div>
-        <h2 class="Food-title">BURGERS</h2>
-        <p class="ft-1">All of our burgers are approved with Grade A angus beef!</p>
-      </div>
-      <!-- Hidden on default. Visible on mobile -->
         </div>
           <ul id="food-menu">
             <a href="index.html"><b><li>Burgers</li></b></a>
@@ -117,22 +94,23 @@
             <a href="salad.html"><li>Salads</li></a>
           </ul>
       </div>
+      <div>
+        <h2 class="Food-title">BURGERS</h2>
+        <p class="ft-1">All of our burgers are approved with Grade A angus beef!</p>
+      </div>
     <!-- Using js to fill in images with their name and desc. -->
     <div id="food-image-container">
       <div class="burger-container container">
         <img class="burger-image" src="../menu/menuImages/burger-cheeseburger-close-up-1199960.jpg">
-          <!-- <div class="middle">
-            <p  class="text" id="text" onclick="buttonToggle()" class="text">Add To Cart</p>
-          </div> -->
           <h3 id="itemTitle">New York Style
             <img id="greenTick" src="../menu/menuImages/tick.png" />
           </h3>
           <p class="discription">This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.</p>
-          
           <div id="ctaSection">
             <span class="itemCost">$13.29</span>
-            <button class="addToCartMobile" onclick="buttonToggle()">Add to cart</button>
+            <button class="addToCartMobile" id="addBtn" onclick="buttonToggle()">Add to cart</button>
           </div>
+        </div>
       </div>
     </div>
 
@@ -142,6 +120,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- my scripts -->
-    <script src="../js/burgerSelections.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
