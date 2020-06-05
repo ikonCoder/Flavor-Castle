@@ -80,6 +80,14 @@
     #greenTick{
         display: none;
     }
+    #hiddenCartContainer{
+        margin-left: auto;
+        margin-right: auto;
+        left: 0px;
+        right: 0px;
+        top: 22%;
+        width: 90vw;
+    }
 }
 
 @media (min-width: 576px){

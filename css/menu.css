@@ -52,7 +52,7 @@ a:hover{color: rgb(245,222,179)}
 }
 #food-image-container{
     height: 1000px;
-    margin-left: 5%;
+    margin-left: 8%;
  }
 .burger-image{
     width: 300px;
@@ -70,6 +70,7 @@ a:hover{color: rgb(245,222,179)}
     box-shadow: 1px 1px 10px 0px;
     min-height: 640px;
     border-radius: 12px;
+    margin-bottom: 70px;
 }
 #itemTitle{
     font-family: 'Baloo Thambi 2', cursive;
@@ -143,9 +144,10 @@ a:hover{color: rgb(245,222,179)}
 
 /* Hidden cart */
 #hiddenCartContainer{
-    background-color: rgb(245,222,179);
+    background-color: rgba(234, 204, 147, 0.76);
     border-radius: 30px;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     width: 400px;
     position: absolute;
     top:8.5%;
@@ -160,17 +162,35 @@ a:hover{color: rgb(245,222,179)}
 #hiddenChekOutBtn{
     position: relative;
 }
+#total{
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#cartImg{
+    width: 120px;
+    margin-top: -17px;
+}
+#itemInCartNum{
+    vertical-align: 4px;
+    padding: 9px;
+}
+.itemsInCartContainer{
+    height: 100px;
+}
 .qtyInput{
     width: 30px;
 }
 .removeBtn{
     float: right;
-    margin-right: 25px;
-    margin-left: 30px;
+    margin-top: 7px;
+    margin-left: 55px;
 }
 .qntContainer{
     float: right;
     font-size: 20px;
+    margin-top: 7px;
 }
 .incBtn, .decBtn{
     padding: 0px 10px;
