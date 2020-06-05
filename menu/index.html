@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/breakpoints.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Fonts CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500&display=swap" rel="stylesheet">
   
@@ -80,7 +81,7 @@
         </div>
       </nav>
     </div> 
-    <a class="cartContainer" href="../order.html">
+    <a class="cartContainer">
       <img id="shoppingCart" src="../images/cart.png"/>
       <div class="dot" id="cartValue">
         0
@@ -111,6 +112,30 @@
             <button class="addToCartMobile" id="addBtn" onclick="buttonToggle()">Add to cart</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="hiddenCartContainer" class="w3-animate-right" style="display: none;">
+      <div id="cartHidden">
+        <span id="total"></span>
+
+        <div class="itemsInCartContainer">
+          <img>
+          <button type="button" class="btn btn-danger removeBtn">Remove</button>
+
+          <div class="qntContainer">
+            <input class="qtyInput"></input>
+            <span class="incBtn">+</span>
+            <span class="decBtn">-</span>
+          </div>
+        </div>
+
+        <figure>
+          <div>
+            <span class="checkOut">Checkout</span>
+            <span class="checkOut">Yummm</span>
+          </div>
+        </figure>
       </div>
     </div>
 

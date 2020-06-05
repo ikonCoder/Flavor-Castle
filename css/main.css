@@ -1,18 +1,10 @@
-body{
-    padding-bottom: 20px;
-    background-color: #FFFFF0 !important;
-}
+body{padding-bottom: 20px;background-color: #FFFFF0 !important;}
+*{box-sizing: border-box;}
 
-.navbar{
-    background-color: #FFFFF0 !important;
-}
 
-*{
-    box-sizing: border-box;   
-}
 
 /* NAVIGATION */
-
+.navbar{background-color: #FFFFF0 !important;}
 .d-flex{
 padding-bottom: -10px;
 margin-bottom: -15px;
@@ -41,15 +33,13 @@ font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     padding-left: 50px;
 }
-
 .main {
     padding-top: 100px;
     right: 50px;
-   }
+}
 .style-title{
     font-size: 95px;
-     font-family: 'Raleway', sans-serif; 
-
+    font-family: 'Raleway', sans-serif; 
 }
 .fixed-bg {
     background-image: url('../images/image1.jpg');
@@ -64,11 +54,11 @@ font-family: 'Open Sans', sans-serif;
     background-size: cover;
 }
 
+
 /* Reviews/ */
 .award-container *{
     margin-top: 70px;
 }
-
 .awards-main-container{
     padding: 50px;
     margin-top: 50px;
@@ -98,8 +88,6 @@ img:hover{
     color: white;
     font-size: 70px;
 }
-
-
 .main-gallery{
     width:45%;
     height: 500px;
@@ -109,60 +97,52 @@ img:hover{
     display: inline-flex;
     background-color: black;
 }
-
 .column {
     float: left;
     width: 50%;
-    padding:0px 2px 2px;  }
-  
-  /* Clear floats after image containers */
-  .row::after {
+    padding:0px 2px 2px;  
+}
+.row::after {
     content: "";
     clear: both;
     display: table;
-  }
-  .row{
-      margin-left:0px !important;
-      margin-right:0px !important;
-  } 
+}
+.row{
+    margin-left:0px !important;
+    margin-right:0px !important;
+} 
+
 
   /*About Us Section/*/
-
-  .AboutUs-container{
-      padding: 50px;
-      margin-bottom: 40px;
-      margin-top: 40px;
-  }
-  
-  #AboutUs{
-      font-size: 70px;
-      margin-bottom: 45px;
-  }
-
-  .AboutUsP{
-      font-size: 25px;
-      line-height: 35px;
-      font-family: 'PT Serif', serif;
-      padding-left: 25px;
-  }
-
-  .Newsletter *{
+.AboutUs-container{
+    padding: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+#AboutUs{
+    font-size: 70px;
+    margin-bottom: 45px;
+}
+.AboutUsP{
+    font-size: 25px;
+    line-height: 35px;
+    font-family: 'PT Serif', serif;
+    padding-left: 25px;
+}
+.Newsletter *{
     margin: 0 auto;
     font-size: 50px;
-  } 
-
+} 
 .NewsLetter-info{
     margin:0 auto;
     text-align: center;
 }
-
 #gridContainer_contact{
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     "a b";
 }
-
 #grid-a{
     grid-area: a;
 }
@@ -173,20 +153,18 @@ img:hover{
 }
 
 
-
+/* Footer section */
 .submitButton{
     margin-left: 0;
     margin-right: 2%;
     margin-top: 10px !important;
 }
-
 .email-input{
     display: block;
     margin-left: 42%;
     margin-right: 20px;
 
 }
-
 .contantUs-conatainer h6{
     font-size: 50px;
 }
@@ -200,7 +178,6 @@ img:hover{
     text-align: center;
     margin-top: 50px;
 }
-
 .googleMaps{
     height: 300px;
     width: 500px;
@@ -209,22 +186,23 @@ img:hover{
     margin-bottom: 100px;
     margin-right: -5%;
 }
-
 .hoo-container li{
     display: block;
     text-decoration: none;
 }
 
+
+/* Shopping cart */
 .cartContainer{
     position: absolute;
     right: 25px;
     top: 23px;
+    cursor: pointer;
 }
 #shoppingCart{
     width:23px;
     float: right;
 }
-
 #finalOrderContainer{
     margin-top: 3.5%;
     width: 90vw;
@@ -232,7 +210,6 @@ img:hover{
     background-color: rgb(245,222,179);
     border-radius: 3px 50px 30px;
 }
-
 #finalInnerContainer{
     background-color: #FFFFF0;
     border-radius: 50px 50px 50px;
@@ -240,7 +217,6 @@ img:hover{
     height: 80vh;
     margin-left: 20px;
 }
-
 #orderTitle{
     color: white;
     padding: 20px 10px;
@@ -256,10 +232,14 @@ img:hover{
     padding-top: 50px;
     font-size: 20px;
 }
-
 #orderedItems{
     margin-left: 5%;
 }
+
+
+
+
+
 
 /* Media queries */
 @media only screen and (max-width: 991px) {

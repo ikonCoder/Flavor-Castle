@@ -1,6 +1,7 @@
 //Globals 
 var cartCounter = 0;
 var totalItems = 6;
+var cartOpen = 0;
 
 
 
@@ -14,42 +15,42 @@ var menuData = [
         "imgPath" : "menuImages/burger-cheeseburger-close-up-1199960.jpg",
         "item" : "New York Style",
         "desc" : "This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.",
-        "cost" : "$13.50",
+        "cost" : "13.00",
         "inCart" : "0"      
     },
     {
         "imgPath" : "menuImages/beef-bread-breakfast-1251198.jpg",
         "item" : "Old Classic",
         "desc" : "The old classic is made with love. A house favoritve that can be customized to hears desire.",
-        "cost" : "$13.00",
+        "cost" : "13.00",
         "inCart" : "0"       
     },
     {
         "imgPath" : "menuImages/beef-bread-burger-156114.jpg",
         "item" : "Meat Maddness",
         "desc" : "The Meat Maddess is a burger not for the light of heat. MM comes with your choice of toppings, but includes bacon, two patties, and egge white.",
-        "cost" : "$10.00",
+        "cost" : "10.00",
         "inCart" : "0"  
         },
     {
         "imgPath" : "menuImages/basil-beef-delicious-47725.jpg",
         "item" : "Vegan Special",
         "desc" : "This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.",
-        "cost" : "$9.00",
+        "cost" : "9.00",
         "inCart" : "0"       
     },
     {
         "imgPath" : "menuImages/burger5.jpg",
         "item" : "Old Classic",
         "desc" : "The old classic is made with love. A house favoritve that can be customized to hears desire.",
-        "cost" : "$8.50",
+        "cost" : "8.00",
         "inCart" : "0"         
     },
     {
         "imgPath" : "menuImages/burger6.jpg",
         "item" : "KSA Burger",
         "desc" : "The Meat Maddess is a burger not for the light of heat. MM comes with your choice of toppings, but includes bacon, two patties, and egge white.",
-        "cost" : "$9.00",
+        "cost" : "9.00",
         "inCart" : "0"          
     }
 ]
@@ -79,6 +80,8 @@ let carts = document.querySelectorAll('.addToCartMobile');
 for(let i=0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
         cartNumbers(menuData[i]);
+        totalCost(menuData[i]);
+        alert("Your item has been added!");
     })
 }
 
@@ -97,7 +100,6 @@ function cartNumbers(product){
     if(productNumbers){
         localStorage.setItem('cartNumbers', productNumbers + 1);
         document.querySelector('#cartValue').textContent = productNumbers + 1;
-        alert("Your item has been added!");
     } 
     else{
         localStorage.setItem('cartNumbers', 1);
@@ -128,6 +130,41 @@ function setItems(product){
     }
 
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+function totalCost(menuData){
+    let cartCost = localStorage.getItem("totalCost");
+
+    if(cartCost != null) {
+        cartCost = parseInt(cartCost);
+        menuData.cost = parseInt(menuData.cost)
+        localStorage.setItem("totalCost", cartCost + menuData.cost);
+    } else {
+        localStorage.setItem("totalCost", menuData.cost);
+    }
+}
+
+
+
+//Code for hiding and showing cart on menu page
+var cartBtn = document.querySelector('.cartContainer');
+cartBtn.addEventListener('click',() => {
+    if(cartOpen == 1){
+        hideCart();
+    }
+    else{
+        revealCart();
+    }
+})
+
+function revealCart(){
+    document.getElementById("hiddenCartContainer").style.display = "block";
+    cartOpen = 1;
+}
+
+function hideCart(){
+    document.getElementById("hiddenCartContainer").style.display = "none";
+    cartOpen = 0;
 }
 
 onLoadCartNumbers();
