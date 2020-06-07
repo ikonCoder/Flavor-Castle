@@ -8,13 +8,13 @@ var deepDishPage;
 var pastaPage;
 
 if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/index.html"){
-    menuData = burgerData;
+    menuData == burgerData;
 }else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/deepDish.html"){
-    menuData = deepdishData;
+    menuData == deepdishData;
 }else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/pasta.html"){
-    menuData = pastaData;
+    menuData == pastaData;
 }else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/salad.html"){
-    menuData = saladData;
+    menuData == saladData;
 }
  
 
