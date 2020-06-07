@@ -7,13 +7,13 @@ var burgerPage;
 var deepDishPage;
 var pastaPage;
 
-if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/index.html"){
+if(pageUrl == "https://ikoncoder.github.io/Flavor-Castle/menu/index.html"){
     menuData == burgerData;
-}else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/deepDish.html"){
+}else if(pageUrl == "https://ikoncoder.github.io/Flavor-Castle/menu/deepDish.html"){
     menuData == deepdishData;
-}else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/pasta.html"){
+}else if(pageUrl == "https://ikoncoder.github.io/Flavor-Castle/menu/pasta.html"){
     menuData == pastaData;
-}else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/salad.html"){
+}else if(pageUrl == "https://ikoncoder.github.io/Flavor-Castle/menu/salad.html"){
     menuData == saladData;
 }
  
