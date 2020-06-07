@@ -1,0 +1,41 @@
+.parallax {
+    /* The image used */
+    background-image: url("../images/contactBanner.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .navbar{
+      width: 100%;
+  }
+
+  #title{
+    text-align: center;
+    width: 100vw;
+    display: block;
+    font-size: 130px;
+    position: absolute;
+    top: 15%;
+    color: white;
+  }
+
+  #phoneNum{
+      text-align: center;
+      margin-top: 3.5%;
+      font-size: 20px;
+  }
+  #email{
+      text-align: center;
+      font-size: 20px;
+  }
+
+  #bold{
+      font-weight: bold;
+  }
