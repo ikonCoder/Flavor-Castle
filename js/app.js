@@ -6,15 +6,16 @@ var cartCost;
 var burgerPage;
 var deepDishPage;
 var pastaPage;
+var menuData;
 
 if(pageUrl == "/Flavor-Castle/menu/index.html"){
-    menuData == burgerData;
+    menuData = burgerData;
 }else if(pageUrl == "/Flavor-Castle/menu/deepDish.html"){
-    menuData == deepdishData;
+    menuData = deepdishData;
 }else if(pageUrl == "/Flavor-Castle/menu/pasta.html"){
-    menuData == pastaData;
+    menuData = pastaData;
 }else if(pageUrl == "/Flavor-Castle/menu/salad.html"){
-    menuData == saladData;
+    menuData = saladData;
 }
  
 
