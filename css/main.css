@@ -11,6 +11,9 @@ margin-bottom: -15px;
 padding-top: 5px;
 font-family: 'Open Sans', sans-serif;
 }
+.navbar-nav{
+    font-size: 20px;
+}
 
 
 /* Landing image and text */

@@ -3,58 +3,22 @@ var cartCounter = 0;
 var totalItems = 6;
 var cartOpen = 0;
 var cartCost;
+var burgerPage;
+var deepDishPage;
+var pastaPage;
+
+if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/index.html"){
+    menuData = burgerData;
+}else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/deepDish.html"){
+    menuData = deepdishData;
+}else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/pasta.html"){
+    menuData = pastaData;
+}else if(pageUrl == "/C:/Users/matth/OneDrive/Desktop/Dev/FlavorCastle/menu/salad.html"){
+    menuData = saladData;
+}
+ 
 
 
-
-
-
-
-
-//Menu Items
-var menuData = [
-    {
-        "imgPath" : "menuImages/burger-cheeseburger-close-up-1199960.jpg",
-        "item" : "New York Style",
-        "desc" : "This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.",
-        "cost" : "13.00",
-        "inCart" : ""      
-    },
-    {
-        "imgPath" : "menuImages/beef-bread-breakfast-1251198.jpg",
-        "item" : "Old Classic",
-        "desc" : "The old classic is made with love. A house favoritve that can be customized to hears desire.",
-        "cost" : "13.00",
-        "inCart" : ""       
-    },
-    {
-        "imgPath" : "menuImages/beef-bread-burger-156114.jpg",
-        "item" : "Meat Maddness",
-        "desc" : "The Meat Maddess is a burger not for the light of heat. MM comes with your choice of toppings, but includes bacon, two patties, and egge white.",
-        "cost" : "10.00",
-        "inCart" : ""  
-        },
-    {
-        "imgPath" : "menuImages/basil-beef-delicious-47725.jpg",
-        "item" : "Vegan Special",
-        "desc" : "This burger is served to perfection. Topped with cheese of your choice, lettuce, tomatoes, grilled onions, special sauce, and old bay.",
-        "cost" : "9.00",
-        "inCart" : ""       
-    },
-    {
-        "imgPath" : "menuImages/burger5.jpg",
-        "item" : "Old Classic",
-        "desc" : "The old classic is made with love. A house favoritve that can be customized to hears desire.",
-        "cost" : "8.00",
-        "inCart" : ""         
-    },
-    {
-        "imgPath" : "menuImages/burger6.jpg",
-        "item" : "KSA Burger",
-        "desc" : "The Meat Maddess is a burger not for the light of heat. MM comes with your choice of toppings, but includes bacon, two patties, and egge white.",
-        "cost" : "9.00",
-        "inCart" : ""          
-    }
-]
 
 for(i = 0; i < totalItems; i++){
     function menuTemplate(item) {
@@ -169,13 +133,13 @@ function revealCart(item){
     costCheck();
 }
 
-function hideCart(){
+function hideCart(e){
     document.getElementById("hiddenCartContainer").style.display = "none";
     document.querySelector(".justify-content-center").style.opacity = "1";
-    document.getElementById("food-menu").style.opacity = "1";
     document.getElementById("food-image-container").style.opacity = "1";
     document.querySelector(".Food-title").style.opacity = "1";
-    document.querySelector(".ft-1").style.opacity = "1";
+    document.querySelector(".ft-1").style.opacity = "1";   
+    document.getElementById("food-menu").style.opacity = "1";
     cartOpen = 0;
 }
 

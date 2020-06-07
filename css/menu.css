@@ -3,7 +3,9 @@ body{background-color:#FFFFF0;font-family: 'Baloo Thambi 2', cursive;}
 li{list-style-type: none;} 
 a:hover{color: rgb(245,222,179)}
 
-
+.navbar-nav{
+    font-size: 20px;
+}
 .Food-title{
     text-align: center;
     font-family: 'Baloo Thambi 2', cursive;
@@ -52,7 +54,7 @@ a:hover{color: rgb(245,222,179)}
 }
 #food-image-container{
     height: 1000px;
-    margin-left: 8%;
+    margin-left: 4%;
  }
 .burger-image{
     width: 300px;
@@ -117,6 +119,7 @@ a:hover{color: rgb(245,222,179)}
     width: 100%;
     margin-right: 0px;
     margin-top: 13.5px;
+    cursor: pointer;
 }
 .cartCounter{
     color: red;
@@ -146,7 +149,7 @@ a:hover{color: rgb(245,222,179)}
 #hiddenCartContainer{
     background-color: rgba(234, 204, 147, 0.76);
     border-radius: 30px;
-    min-height: 500px;
+    min-height: 90vh;
     height: auto;
     width: 400px;
     position: absolute;
